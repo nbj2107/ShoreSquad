@@ -1,0 +1,67 @@
+/* ShoreSquad Color Palette */
+:root {
+  --ocean-blue: #2196F3;
+  --sandy-beige: #FFF8E1;
+  --seafoam-green: #26D7AE;
+  --coral-orange: #FF7043;
+  --deep-navy: #263238;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--sandy-beige);
+  color: var(--deep-navy);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: linear-gradient(90deg, var(--ocean-blue), var(--seafoam-green));
+  color: #fff;
+  padding: 2rem 1rem 1rem 1rem;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+main {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+section {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(38,50,56,0.08);
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+#map {
+  border-left: 8px solid var(--ocean-blue);
+}
+
+#weather {
+  border-left: 8px solid var(--seafoam-green);
+}
+
+#social {
+  border-left: 8px solid var(--coral-orange);
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 1rem 0.5rem;
+  }
+  section {
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
