@@ -15,28 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- Weather Section ---
-  const weatherForm = document.getElementById('weather-form');
-  const weatherResult = document.getElementById('weather-result');
-  weatherForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const city = document.getElementById('city').value.trim();
-    if (!city) return;
-    weatherResult.textContent = 'Loading...';
-    try {
-      // Replace 'YOUR_API_KEY' with a real OpenWeatherMap API key
-      const apiKey = 'YOUR_API_KEY';
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric`;
-      const res = await fetch(url);
-      if (!res.ok) throw new Error('City not found');
-      const data = await res.json();
-      weatherResult.innerHTML = `
-        <strong>${data.name}</strong>: ${data.weather[0].main}, ${data.main.temp}&deg;C
-        <br><small>Wind: ${data.wind.speed} m/s</small>
-      `;
-    } catch (err) {
-      weatherResult.textContent = 'Weather not found.';
-    }
-  });
+  // Mock weather UI only for Week 2
 
   // --- Social Events Section ---
   const eventForm = document.getElementById('event-form');

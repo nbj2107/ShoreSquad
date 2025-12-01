@@ -1,3 +1,17 @@
+/* Gen-Z beachy color tweaks for weather card */
+#weather-mock.card {
+  background: linear-gradient(120deg, #fffbe6 60%, #e0f7fa 100%);
+  border-left: 8px solid #40C9FF;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 24px rgba(64,201,255,0.10);
+}
+
+section#weather h2 {
+  color: #40C9FF;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
 /* ShoreSquad Modern Glassmorphism Styles */
 :root {
   --ocean-blue: #2196F3;
