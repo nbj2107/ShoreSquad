@@ -8,33 +8,54 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
-  <header>
-    <h1>ShoreSquad</h1>
-    <p>Rally your crew, track weather, and hit the next beach cleanup!</p>
+  <header class="main-header">
+    <div class="header-left">
+      <img src="https://img.icons8.com/color/48/000000/beach.png" alt="ShoreSquad Logo" class="logo" />
+      <span class="brand">ShoreSquad</span>
+    </div>
+    <nav class="main-nav">
+      <a href="#map-section">Map</a>
+      <a href="#weather">Weather</a>
+      <a href="#social">Events</a>
+      <a href="#join" class="cta">Join the Squad</a>
+    </nav>
   </header>
   <main>
-    <section id="map-section">
-      <h2>Beach Cleanup Map</h2>
-      <div style="padding:0;overflow:hidden;">
-        <iframe
-          title="Google Map - East Coast Park"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.01939317813!2d103.9404996!3d1.3039941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1a2e2e2e2e2e%3A0x2e2e2e2e2e2e2e2e!2sEast%20Coast%20Park!5e0!3m2!1sen!2ssg!4v1700000000000!5m2!1sen!2ssg"
-          width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <section class="hero card">
+      <h1>Make Waves, Make Change: Clean Beaches, Together!</h1>
+      <p>Join ShoreSquad to discover cleanups, check the latest weather, and connect with your eco-crew for a greener tomorrow.</p>
+      <div class="hero-actions">
+        <a href="#map-section" class="btn btn-primary">Find nearby cleanups</a>
+        <a href="#social" class="btn btn-outline">Browse events</a>
       </div>
     </section>
-    <section id="weather">
-      <h2>Weather Tracker</h2>
-      <form id="weather-form" aria-label="Weather Search">
-        <input type="text" id="city" name="city" placeholder="Enter city" aria-label="City">
-        <button type="submit">Get Weather</button>
-      </form>
-        <div id="weather-real" class="card" aria-live="polite">
-           <div id="weather-loading"><span class="spinner"></span> Loading real weather data...</div>
-          <div id="weather-error" style="color:#FF7043; display:none;"></div>
-          <div id="weather-content" style="display:none;"></div>
+    <section id="map-section" class="card">
+      <h2>Map — local cleanups & spots</h2>
+      <p class="section-desc">Tap a marker to see details, add one of your own, or filter by date.</p>
+      <div class="next-cleanup">
+        <strong>Next Cleanup — Pasir Ris</strong>
+        <p>Cleanup begins at Street View Asia coordinates 1.381497, 103.955574.</p>
+        <div class="map-embed">
+          <iframe
+            title="Google Map - Pasir Ris Park"
+            src="https://www.google.com/maps?q=1.381497,103.955574&z=15&output=embed"
+            width="100%" height="250" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
         </div>
+        <div class="map-links">
+          <a href="https://maps.google.com/?q=1.381497,103.955574" target="_blank">Open in Google Maps</a> ·
+          <a href="https://www.openstreetmap.org/?mlat=1.381497&mlon=103.955574#map=15/1.381497/103.955574" target="_blank">Open Street View</a>
+        </div>
+      </div>
     </section>
-    <section id="social">
+    <section id="weather" class="card">
+      <h2>Weather Vibes 🌊</h2>
+      <div id="weather-real" aria-live="polite">
+        <div id="weather-loading"><span class="spinner"></span> Loading real weather data...</div>
+        <div id="weather-error" style="color:#FF7043; display:none;"></div>
+        <div id="weather-content" style="display:none;"></div>
+      </div>
+    </section>
+    <section id="social" class="card">
       <h2>Upcoming Cleanups</h2>
       <form id="event-form" aria-label="Create Event">
         <input type="text" id="event-name" placeholder="Event name" required aria-label="Event Name">
