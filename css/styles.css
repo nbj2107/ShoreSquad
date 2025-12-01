@@ -1,3 +1,38 @@
+/* Loading spinner for weather */
+#weather-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  font-size: 1.1rem;
+}
+.spinner {
+  width: 1.2em;
+  height: 1.2em;
+  border: 3px solid #40C9FF;
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Mobile polish */
+@media (max-width: 480px) {
+  .card, #weather-mock.card, #weather-real.card {
+    padding: 0.7rem 0.5rem;
+    font-size: 0.98rem;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  section#weather h2, section#map-section h2 {
+    font-size: 1.1rem;
+  }
+}
 /* Gen-Z beachy color tweaks for weather card */
 #weather-mock.card {
   background: linear-gradient(120deg, #fffbe6 60%, #e0f7fa 100%);
